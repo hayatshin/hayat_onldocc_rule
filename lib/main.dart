@@ -50,6 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
         body: Padding(
           padding: const EdgeInsets.all(20),
           child: TabBarView(
+            physics: const NeverScrollableScrollPhysics(),
             children: [
               SingleChildScrollView(child: Text(RuleString().appRule)),
               SingleChildScrollView(child: Text(RuleString().personalInfo)),

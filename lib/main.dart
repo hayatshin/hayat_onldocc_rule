@@ -51,8 +51,8 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: const EdgeInsets.all(20),
           child: TabBarView(
             children: [
-              Text(RuleString().appRule),
-              Text(RuleString().personalInfo),
+              SingleChildScrollView(child: Text(RuleString().appRule)),
+              SingleChildScrollView(child: Text(RuleString().personalInfo)),
             ],
           ),
         ),

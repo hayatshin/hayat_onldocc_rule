@@ -17,6 +17,9 @@ jobs:
           touch env.json
           echo "CHECK: ${{ secrets.CHECK }}" >> env.json
 
+      - name: Run Flutter with env.json
+        run: flutter run --dart-define-from-file=env.json
+
       - uses: bluefireteam/flutter-gh-pages@v7
         with:
           baseHref: /hayat_onldocc_rule/

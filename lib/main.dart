@@ -11,8 +11,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    var env = const String.fromEnvironment("CHECK");
+
     return MaterialApp(
-      title: '오늘도청춘 약관',
+      title: '${env} 약관',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFFF2D78)),
         useMaterial3: true,

@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   void _initializeEnv() async {
-    await dotenv.load(fileName: ".env");
+    await dotenv.load(fileName: "env");
     setState(() {
       env = dotenv.env["CHECK"]!;
     });

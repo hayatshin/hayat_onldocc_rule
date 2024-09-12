@@ -14,8 +14,8 @@ jobs:
 
       - name: Generate .env file
         run: |
-          touch ./assets/.env
-          echo "CHECK=${{ secrets.CHECK }}" >> ./assets/.env
+          touch env
+          echo "CHECK=${{ secrets.CHECK }}" >> env
 
       - uses: bluefireteam/flutter-gh-pages@v7
         with:

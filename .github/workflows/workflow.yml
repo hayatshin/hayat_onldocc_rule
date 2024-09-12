@@ -12,13 +12,10 @@ jobs:
       - uses: actions/checkout@v2
       - uses: subosito/flutter-action@v1
 
-      - name: Generate env.json
+      - name: Generate .env file
         run: |
-          touch env.json
-          echo "CHECK: ${{ secrets.CHECK }}" >> env.json
-
-      - name: Run Flutter with env.json
-        run: flutter run --dart-define-from-file=env.json
+          touch .env
+          echo "CHECK=${{ secrets.CHECK }}" >> .env
 
       - uses: bluefireteam/flutter-gh-pages@v7
         with:

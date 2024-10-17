@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:hayat_onldocc_rule/strings/rule_string.dart';
 
 void main() {
@@ -14,26 +13,26 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String env = "";
+  // String env = "";
 
   @override
   void initState() {
     super.initState();
-    _initializeEnv();
+    // _initializeEnv();
   }
 
   void _initializeEnv() async {
-    await dotenv.load(fileName: "env");
-    setState(() {
-      env = dotenv.env["CHECK"]!;
-    });
+    // await dotenv.load(fileName: "env");
+    // setState(() {
+    //   env = dotenv.env["CHECK"]!;
+    // });
   }
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '$env 약관',
+      title: '인지케어 약관',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFFF2D78)),
         useMaterial3: true,

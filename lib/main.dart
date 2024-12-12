@@ -60,10 +60,10 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           bottom: const TabBar(tabs: [
             Tab(
-              text: "하야트 이용약관",
+              text: "서비스 이용약관",
             ),
             Tab(
-              text: "개인정보 처리방침",
+              text: "개인정보처리방침",
             ),
           ]),
         ),

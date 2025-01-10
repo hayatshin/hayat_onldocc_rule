@@ -70,15 +70,18 @@ class MyHomePage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
-          bottom: const TabBar(
-            tabs: [
-              Tab(
-                text: "개인정보 처리방침",
-              ),
-              Tab(
-                text: "서비스 이용약관",
-              ),
-            ],
+          bottom: const PreferredSize(
+            preferredSize: Size.fromHeight(10.0),
+            child: TabBar(
+              tabs: [
+                Tab(
+                  text: "개인정보 처리방침",
+                ),
+                Tab(
+                  text: "서비스 이용약관",
+                ),
+              ],
+            ),
           ),
         ),
         body: TabBarView(
